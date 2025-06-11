@@ -3,15 +3,16 @@ import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 
 // Firebase configuration - Replace these empty strings with your actual Firebase config
-const firebaseConfig = {
-  apiKey: "AIzaSyCa8YwouOR0HXT3SmiraVVPrV4fIagr57U",
-  authDomain: "quiz-8958b.firebaseapp.com",
-  projectId: "quiz-8958b",
-  storageBucket: "quiz-8958b.firebasestorage.app",
-  messagingSenderId: "42383928765",
-  appId: "1:42383928765:web:328bf9ba0661dbd6ae36d4",
-  measurementId: "G-SQYWFYCJEK"
+export const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
+
 
 
 // Check if Firebase config is provided
